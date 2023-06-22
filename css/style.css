@@ -114,32 +114,38 @@ body {
 
 /* Trends */
 
-.trends {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 .trends-title {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
-  margin-top: 0;
+  margin-top: 60px;
+  margin-bottom: 14px;
   width: 100%;
 }
 
-.trends-title::after { 
+.trends-title::after {
   content: "";
   display: block;
   width: 66px;
   margin: 14px auto;
   border-bottom: 3px solid #b59f5b;
 }
+.trends {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
 
 .trend-card {
+  background-color: #eff5f1;
   width: calc((100% - 15px) / 4);
-  height: 320px;
-  border: 3px solid #b59f5b;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 0;
 }
 
 .trend-card::after {
@@ -154,50 +160,119 @@ body {
   z-index: -1;
 }
 
-/* .trend-card:nth-child(n + 2) {
-  margin-left: 5px;
-} 
-
-.background-card1 {
-  background-color: #eff5f1;
-  background-image: url("../images/trend1.jpg");
+.trend1 {
+  background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend1.jpg?raw=true");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative;
-  z-index: 0;
 }
-
-.background-card2 {
-  background-color: #eff5f1;
-  background-image: url("../images/trend2.jpg");
+.trend2 {
+  background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend2.jpg?raw=true");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative;
-  z-index: 0;
 }
 
-.background-card3 {
-  background-color: #eff5f1;
-  background-image: url("../images/trend3.jpg");
+.trend3 {
+  background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend3.jpg?raw=true");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative;
-  z-index: 0;
 }
 
-.background-card4 {
-  background-color: #eff5f1;
-  background-image: url("../images/trend4.jpg");
+.trend4 {
+  background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend4.jpg?raw=true");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative;
-  z-index: 0;
 }
-*/
+
+.trend-content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 34px;
+  border: 3px solid #b59f5b;
+  margin-left: 22px;
+  margin-right: 22px;
+  margin-bottom: 16px;
+}
+.trend-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  text-transform: uppercase;
+  color: #b59f5b;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.trend-tag {
+  list-style-type: none;
+}
+
+.trend-tag-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.trend-card-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1199px) and (min-width: 641px) and (orientation: landscape) {
+  .trend-card {
+    width: calc((100% - 15px) / 4);
+  }
+  .trend-card-title {
+    font-size: 17px;
+    line-height: 1.3em;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 641px) and (orientation: portrait) {
+  .trend-card {
+    width: calc((100% - 5px) / 2);
+  }
+  .trend-card-title {
+    font-size: 17px;
+    line-height: 1.3em;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .trend-card {
+    width: calc((100% - 5px) / 2);
+  }
+  .trend-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .trend-card-title {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .trend-card {
+    width: 100%;
+  }
+  .trend-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .trend-card-title {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+}
 
 /* Main */
 
@@ -509,12 +584,14 @@ body {
   vertical-align: super;
 }
 
-/*  блок наши изделия  */
+/* блок товаров из магазина */
 
 .shop-items {
   display: flex;
   flex-wrap: wrap;
-  /*  justify-content: space-between; */
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .shop-items-title {
@@ -522,7 +599,8 @@ body {
   font-size: 20px;
   font-weight: 700;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 0;
+  margin-bottom: 14px;
   width: 100%;
 }
 
@@ -530,7 +608,7 @@ body {
   content: "";
   display: block;
   width: 66px;
-  margin: 14px auto 0;
+  margin: 14px auto;
   border-bottom: 3px solid #b59f5b;
 }
 
@@ -538,26 +616,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 28px;
-  width: calc((100% - 130px) / 3);
-}
-
-.shop-item:nth-child(2n + 3) {
-  margin-left: 65px;
-  margin-right: 65px;
 }
 
 .shop-item__picture {
+  /*  object-fit: contain; 
   background-color: #eff5f1;
-  margin: 0 23px;
-  max-width: 300px;
-}
-
-.picture {
-  /*  
-  background-size: cover; 
-  height: 100%; */
-  max-width: 100%;
+  background-size: contain; */
 }
 
 .shop-item__body {
@@ -566,7 +630,7 @@ body {
   outline-offset: 24px;
   margin-top: -10px;
    width: 100%; */
-  margin-top: -32px;
+  margin-top: -29px;
   padding: 20px;
   border: 3px solid #b59f5b;
   max-width: 300px;
@@ -579,7 +643,6 @@ body {
 
 .shop-item__title {
   font-size: 20px;
-  line-height: 1.2em;
   text-transform: uppercase;
 }
 
@@ -627,45 +690,6 @@ body {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-@media (max-width: 1199px) and (min-width: 641px) {
-  .shop-items {
-    margin: 0 auto;
-  }
-  .shop-item {
-    width: calc((100% - 24px) / 2);
-  }
-  .shop-item:nth-child(2n + 3) {
-    margin-left: 24px;
-    margin-right: 0;
-  }
-
-  .shop-item__picture {
-    background-color: #eff5f1;
-    max-width: 292px;
-  }
-  .shop-item__title {
-    font-size: 17px;
-    line-height: 1.3em;
-  }
-  .shop-item__body {
-    max-width: 292px;
-  }
-}
-
-@media (max-width: 640px) {
-  .shop-item {
-    width: 100%;
-  }
-  .shop-item:nth-child(2n + 3) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .shop-item__title {
-    font-size: 17px;
-    line-height: 1.3em;
-  }
 }
 
 
