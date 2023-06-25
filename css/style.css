@@ -216,32 +216,7 @@ body {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-@media (min-width: 640px) and (max-width: 1199px) {
-  .popup__container {
-    max-width: 330px;
-  }
-  
-  .popup__title {
-    font-size: 18px;
-  }
 
-  .popup__close {
-    font-size: 27px;
-  }
-}
-
-@media (max-width: 640px) {
-  .popup__container {
-    max-width: 390px;
-  }
-  .popup__title {
-    font-size: 16px;
-  }
-
-  .popup__close {
-    font-size: 27px;
-  }
-}
 
 .container {
   max-width: 1200px;
@@ -452,53 +427,7 @@ body {
   text-transform: uppercase;
 }
 
-@media (max-width: 1199px) and (min-width: 641px) and (orientation: landscape) {
-  .trend-card {
-    width: calc((100% - 15px) / 4);
-  }
-  .trend-card-title {
-    font-size: 17px;
-    line-height: 1.3em;
-  }
-}
 
-@media (max-width: 1199px) and (min-width: 641px) and (orientation: portrait) {
-  .trend-card {
-    width: calc((100% - 5px) / 2);
-  }
-  .trend-card-title {
-    font-size: 17px;
-    line-height: 1.3em;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 640px) {
-  .trend-card {
-    width: calc((100% - 5px) / 2);
-  }
-  .trend-content {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-  .trend-card-title {
-    font-size: 16px;
-    line-height: 1.25em;
-  }
-}
-
-@media (max-width: 640px) and (orientation: portrait) {
-  .trend-card {
-    width: 100%;
-  }
-  .trend-content {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-  .trend-card-title {
-    font-size: 16px;
-    line-height: 1.25em;
-  }
-}
 
 /* Main */
 
@@ -507,11 +436,12 @@ body {
   margin-bottom: 64px;
   display: flex;
   justify-content: space-between;
+  gap: 35px;
 }
 
 /* Main-news */
 .post-list {
-  width: 778px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -523,8 +453,12 @@ body {
 }
 
 .post-picture {
-  width: 381px;
+  min-width: 381px;
   margin: 0;
+}
+
+.picture {
+  width: 100%;
 }
 
 .post-frame {
@@ -588,7 +522,7 @@ body {
 
 .post-text {
   font-size: 15px;
-  line-height: ;
+  /* line-height: ; */
 }
 /* Main-sidebar */
 
@@ -844,11 +778,11 @@ body {
   align-items: center;
 }
 
-.shop-item__picture {
-  /*  object-fit: contain; 
+/* .shop-item__picture {
+    object-fit: contain; 
   background-color: #eff5f1;
-  background-size: contain; */
-}
+  background-size: contain; 
+} */
 
 .shop-item__body {
   /* box-sizing: border-box;
@@ -863,9 +797,9 @@ body {
   flex-grow: 1;
 }
 
-.shop-item__content {
-  /* min-height: 200px; */
-}
+/*.shop-item__content {
+   min-height: 200px;
+}  */
 
 .shop-item__title {
   font-size: 20px;
@@ -966,4 +900,93 @@ body {
 .copyrights-link {
   text-decoration: none;
   color: #999999;
+}
+
+
+@media (min-width: 640px) and (max-width: 1199px) {
+  .popup__container {
+    max-width: 330px;
+  }
+  
+  .popup__title {
+    font-size: 18px;
+  }
+
+  .popup__close {
+    font-size: 27px;
+  }
+  .container{
+    padding: 35px;
+  }
+
+  .content {
+    justify-content: start;
+  }
+  .main {
+    width: calc(100% - 272px);
+  }
+  .post {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup__container {
+    max-width: 390px;
+  }
+  .popup__title {
+    font-size: 16px;
+  }
+
+  .popup__close {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 641px) and (orientation: landscape) {
+  .trend-card {
+    width: calc((100% - 15px) / 4);
+  }
+  .trend-card-title {
+    font-size: 17px;
+    line-height: 1.3em;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 641px) and (orientation: portrait) {
+  .trend-card {
+    width: calc((100% - 5px) / 2);
+  }
+  .trend-card-title {
+    font-size: 17px;
+    line-height: 1.3em;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .trend-card {
+    width: calc((100% - 5px) / 2);
+  }
+  .trend-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .trend-card-title {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .trend-card {
+    width: 100%;
+  }
+  .trend-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .trend-card-title {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
 }
