@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Дипломный проект курса «Адаптивная и мобильная вёрстка»</title>
   <link rel="stylesheet" href="css/style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -17,6 +17,9 @@
       </a>
       <!-- Меню сайта -->
       <nav class="nav">
+        <button class="nav__button">
+          <span class="nav__button-label"></span>
+        </button>
         <ul class="nav-list">
           <li class="nav-item"><a href="#0" class="nav-link">Главная</a></li>
           <li class="nav-item"><a href="#0" class="nav-link">посты</a></li>
@@ -405,8 +408,9 @@
   </div>
 
   <!-- наши изделия-->
+  <div class="shop-items-title">Наши изделия</div>
   <div class="shop-items">
-    <div class="shop-items-title">Наши изделия</div>
+  
 
     <article class="shop-item">
       <picture class="shop-item__picture">
@@ -518,7 +522,7 @@
 
 <!--  Pop-Up -->
 <div class="popup _hidden">
-  <div class="popup__container _hidden">
+  <div class="popup__container">
     <div class="fedback">
       <header class="popup__title">ваш фидбэк</header>
       <div class="fedback__content">
