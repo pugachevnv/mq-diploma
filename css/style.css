@@ -731,26 +731,27 @@ p {
   display: none;
 }
 
-.popup {
+.popup__container {
   width: 100%;
-  min-width: 330px;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
-  padding: 0 15px;
+  padding: 57px 15px;
+  display: flex;
 }
 
-.popup__container {
-  max-width: 400px;
+.fedback {
+  max-width: 390px;
   padding: 54px 30px;
   margin: auto;
   background-color: #ffffff;
   position: relative;
   box-sizing: border-box;
 }
+
 .popup__title {
   text-transform: uppercase;
   font-size: 20px;
@@ -929,9 +930,6 @@ p {
 @media (min-width: 640px) and (max-width: 1199px) {
   
   /* pop up */
-  .popup__container {
-    max-width: 330px;
-  }
   
   .popup__title {
     font-size: 18px;
@@ -1146,8 +1144,8 @@ p {
 @media (max-width: 640px) {
   
   /* pop up */
-  .popup__container {
-    max-width: 390px;
+  .fedback {
+    padding: 30px 30px;
   }
 
   .popup__title {
