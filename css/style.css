@@ -1024,8 +1024,8 @@ p {
   }
 
   .trend-card {
-    width: calc((100% - 5px) / 2);
     min-height: 247px;
+    width: calc((100% - 5px) / 2);
   }
   .trend-card-title {
     font-size: 17px;
@@ -1371,11 +1371,17 @@ p {
   }
 }
 
+
 @media (orientation: landscape) and (max-width: 640px) {
   .trend-card {
     width: calc((100% - 5px) / 2);
   }
+}
 
+@media (orientation: landscape) and (min-height: 641px) {
+  .trend-card {
+    width: calc((100% - 15px) / 4);
+  }
 }
 
 /* @media (max-width: 1199px) and (min-width: 641px) and (orientation: landscape) {
